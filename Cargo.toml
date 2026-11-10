@@ -10,3 +10,8 @@ crate-type = ["cdylib"]
 [dependencies]
 worker = { version = "0.8" }
 worker-macros = { version = "0.8" }
+
+[profile.release]
+lto = true
+strip = true
+codegen-units = 1
